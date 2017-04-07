@@ -12,6 +12,7 @@ describe('sinon tests', function () {
     student = {
       dropClass: function (classId, cb) {
         // do stuff
+        // Checks if dropclass exists on object
         if (!!cb.dropClass) {
           cb.dropClass();
         } else {
