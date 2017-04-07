@@ -5,7 +5,7 @@ var sinon = require('sinon');
 var expect = chai.expect;
 chai.should();
 
-describe('sinon tests', function () {
+xdescribe('sinon tests', function () {
   var student, schedule;
 
   beforeEach(function () {

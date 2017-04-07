@@ -7,7 +7,7 @@ var expect = chai.expect;
 
 chai.should();
 
-describe('number tests', function () {
+xdescribe('number tests', function () {
   function isEven (num) {
     return num % 2 === 0;
   }
