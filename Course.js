@@ -32,6 +32,15 @@ _p.unregisterStudent = function (studentId) {
 
 _p.addTimes = function (days, times) {
   var me = this;
+    var validDays = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday"
+  ];
 
   if (!Array.isArray(days)) {
     days = [days];
@@ -40,6 +49,9 @@ _p.addTimes = function (days, times) {
     times = [times];
   }
   days.forEach(function (day) {
+    if(validDays.indexOf(day) === -1){
+      throw new Error(day + ' is not a valid day.')
+    }
     times.forEach(function (time) {
       me.times.push({
         'day': day,
@@ -47,6 +59,7 @@ _p.addTimes = function (days, times) {
       });
     });
   });
+
 };
 
 _p.showSchedule = function () {

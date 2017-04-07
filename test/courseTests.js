@@ -44,4 +44,25 @@ describe('Course', function(){
       }).to.throw();
     });
   });
+
+  describe('addTimes', function(){
+    it('should add the given days/times to the course', function(){
+      var course = Course.create(courseName, courseCode, courseDescription);
+      var days = ['Monday', 'Wednesday', 'Friday'];
+      var times = ['10:00', '14:00'];
+      course.addTimes(days, times);
+      course.times.length.should.equal(6);
+      course.times[2].should.eql({
+        day:"Wednesday", time: "10:00"
+      });
+    });
+    it('should not add a non-day to the times array', function(){
+      var course = Course.create(courseName, courseCode, courseDescription);
+      var day = "someday";
+      var time = "10:00";
+      expect(function(){
+        course.addTimes(day, time);
+      }).to.throw();
+    });
+  })
 });
