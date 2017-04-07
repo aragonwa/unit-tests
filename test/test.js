@@ -37,7 +37,7 @@ describe('number tests', function () {
       num.should.equal(10);
     });
 
-    xit('should be twelve when adding 7 to 5', function () {
+    it('should be twelve when adding 7 to 5', function () {
       add(num, 7).should.equal(12);
     });
   });
