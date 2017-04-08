@@ -6,7 +6,7 @@ var chai = require('chai');
 var should = chai.should();
 var expect = chai.expect;
 
-describe('Course', function(){
+xdescribe('Course', function(){
   var courseName = "Introduction to Awesomeness";
   var courseCode = "AWE 101";
   var courseDescription = "This course will make you awesome!";

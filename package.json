@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --watch --reporter spec"
+    "test": "mocha --watch --reporter spec",
+    "coverage" : "istanbul cover ./node_modules/.bin/_mocha -- -R spec"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "bluebird": "^3.5.0",
     "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "istanbul": "^0.4.5",
     "mocha": "^3.2.0",
     "sinon": "^2.1.0",
     "uuid": "^3.0.1"
